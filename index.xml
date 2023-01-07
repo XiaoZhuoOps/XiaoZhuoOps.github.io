@@ -27,11 +27,27 @@
     
     <item>
       <title>Leetcode</title>
-      <link>https://xiaozhuoops.github.io/cs/leetcode/</link>
+      <link>https://xiaozhuoops.github.io/cs/leetcode/leetcode/</link>
       <pubDate>Sat, 07 Jan 2023 21:23:35 +0800</pubDate>
       
-      <guid>https://xiaozhuoops.github.io/cs/leetcode/</guid>
-      <description>this is my first blog!</description>
+      <guid>https://xiaozhuoops.github.io/cs/leetcode/leetcode/</guid>
+      <description>算法手册 优秀算法手册参考 [灵神]https://github.com/EndlessCheng/codeforces-go/blob/master/copypasta/dp.go [K 神]https://leetcode.cn/u/jyd/ [OIWIKI]https://oi-wiki.org/ds/seg/ [背包 9 讲]http://static.kancloud.cn/kancloud/pack/70125 [刷题路线]Home · SharingSource/LogicStack-LeetCode Wiki (github.com) 刷题规范 数据结构与算法 经典问题 超大数据 10 道 BAT 大厂海量数据面试题（附题解 + 方法总结） - 云 + 社区 - 腾讯云 (tencent.com)
+其他题目都是上述三种子问题的组合
+例题
+基础算法 贪心 问题
+最优解
+逻辑
+每阶段最优 -&amp;gt; 全局最优
+证明方法
+模板
+离线贪心
+「我们将 XXX 按照某某顺序排序，然后按某种顺序（例如从小到大）选择。」 e.g. kruskal 算法 在线贪心
+「我们每次都取 XXX 中最大/小的东西，并更新 XXX。」（有时「XXX 中最大/小的东西」可以优化，比如用优先队列维护） e.g. prim 算法 代码
+倍增 问题
+逻辑
+sf (qq.com)
+例题
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 # 倍增算法解决lca问题 def dfs(i, d): # 先序遍历 dp[i,1] = p[i] j = 1 while 2**j &amp;lt;= d: dp[i,j+1] = dp[dp[i,j], j] j += 1 # 树形dp for ch in chs[i]: dfs(ch, d+1) 递归 问题</description>
     </item>
     
   </channel>

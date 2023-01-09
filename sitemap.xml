@@ -2,23 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://xiaozhuoops.github.io/about/</loc>
-    <lastmod>2023-01-07T22:45:11+08:00</lastmod>
-  </url><url>
-    <loc>https://xiaozhuoops.github.io/</loc>
-    <lastmod>2023-01-07T21:49:43+08:00</lastmod>
-  </url><url>
-    <loc>https://xiaozhuoops.github.io/reading/</loc>
-    <lastmod>2023-01-07T21:49:43+08:00</lastmod>
-  </url><url>
-    <loc>https://xiaozhuoops.github.io/reading/thinking-fast-and-slow/</loc>
-    <lastmod>2023-01-07T21:49:43+08:00</lastmod>
+    <loc>https://xiaozhuoops.github.io/leetcode_group/</loc>
+    <lastmod>2023-01-09T11:31:04+08:00</lastmod>
   </url><url>
     <loc>https://xiaozhuoops.github.io/cs/</loc>
-    <lastmod>2023-01-07T21:23:35+08:00</lastmod>
+    <lastmod>2023-01-09T01:01:33+08:00</lastmod>
   </url><url>
-    <loc>https://xiaozhuoops.github.io/cs/leetcode/leetcode/</loc>
-    <lastmod>2023-01-07T21:23:35+08:00</lastmod>
+    <loc>https://xiaozhuoops.github.io/</loc>
+    <lastmod>2023-01-09T01:01:33+08:00</lastmod>
+  </url><url>
+    <loc>https://xiaozhuoops.github.io/cs/leetcode_skill/</loc>
+    <lastmod>2023-01-09T01:01:33+08:00</lastmod>
   </url><url>
     <loc>https://xiaozhuoops.github.io/tags/</loc>
   </url>

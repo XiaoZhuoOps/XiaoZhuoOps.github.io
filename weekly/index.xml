@@ -6,14 +6,21 @@
     <description>Recent content in Weeklies on Huangyizhuo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 23 Dec 2023 23:02:56 +0800</lastBuildDate>
-    <atom:link href="https://xiaozhuoops.github.io/weekly/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 23 Dec 2023 23:02:56 +0800</lastBuildDate><atom:link href="https://xiaozhuoops.github.io/weekly/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2023 M12 W3</title>
       <link>https://xiaozhuoops.github.io/weekly/2023-m12-w3/</link>
       <pubDate>Sat, 23 Dec 2023 23:02:56 +0800</pubDate>
+      
       <guid>https://xiaozhuoops.github.io/weekly/2023-m12-w3/</guid>
-      <description>工作任务&#xA;迁移几个接口 升级RPC服务框架 个人提升&#xA;最近工作内容繁琐但不深入，没兴趣，重新开始刷题。计划每天一道，早上看，晚上回来写。 最近愈发浮躁，拾起了冥想，效果不错，强烈推荐。 认识了一些新朋友。 问题与思考&#xA;热情与冷静，如何平衡 与其关注别人，不如做好自己 警惕那些愚弄大众，挑拨情绪的事和人 下周计划&#xA;完成服务框架升级任务&#xA;安排下跨年&#xA;咨询下公司健身课</description>
+      <description>工作任务
+迁移几个接口 升级RPC服务框架 个人提升
+最近工作内容繁琐但不深入，没兴趣，重新开始刷题。计划每天一道，早上看，晚上回来写。 最近愈发浮躁，拾起了冥想，效果不错，强烈推荐。 认识了一些新朋友。 问题与思考
+热情与冷静，如何平衡 与其关注别人，不如做好自己 警惕那些愚弄大众，挑拨情绪的事和人 下周计划
+完成服务框架升级任务
+安排下跨年
+咨询下公司健身课</description>
     </item>
+    
   </channel>
 </rss>

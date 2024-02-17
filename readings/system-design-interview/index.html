@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"><title> - Huangyizhuo</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta itemprop="name" content="">
+<meta itemprop="description" content="CHAPTER 1: SCALE FROM ZERO TO MILLIONS OF USERS Glossary Continuous refinement and endless improvement scale it up to serve millions of people A journey of a thousand miles begins with a single step, and building a complex system is no different. Domain Name System An example for &hellip; is shown below SQL database / NoSQL database have been around for 40 years if xx is not suitable for your specific use cases Failover and redundancy Horizontal scaling is more desirable for large scale applications due to the limitations of vertical scaling.">
+
+<meta itemprop="wordCount" content="818">
+<meta itemprop="keywords" content="" /><meta property="og:title" content="" />
+<meta property="og:description" content="CHAPTER 1: SCALE FROM ZERO TO MILLIONS OF USERS Glossary Continuous refinement and endless improvement scale it up to serve millions of people A journey of a thousand miles begins with a single step, and building a complex system is no different. Domain Name System An example for &hellip; is shown below SQL database / NoSQL database have been around for 40 years if xx is not suitable for your specific use cases Failover and redundancy Horizontal scaling is more desirable for large scale applications due to the limitations of vertical scaling." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xiaozhuoops.github.io/readings/system-design-interview/" /><meta property="article:section" content="readings" />
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="CHAPTER 1: SCALE FROM ZERO TO MILLIONS OF USERS Glossary Continuous refinement and endless improvement scale it up to serve millions of people A journey of a thousand miles begins with a single step, and building a complex system is no different. Domain Name System An example for &hellip; is shown below SQL database / NoSQL database have been around for 40 years if xx is not suitable for your specific use cases Failover and redundancy Horizontal scaling is more desirable for large scale applications due to the limitations of vertical scaling."/>
+<link rel="stylesheet" type="text/css" media="screen" href="https://xiaozhuoops.github.io/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://xiaozhuoops.github.io/css/main.css" />
+
+        <link id="dark-scheme" rel="stylesheet" type="text/css" href="https://xiaozhuoops.github.io/css/dark.css" />
+
+	<script src="https://xiaozhuoops.github.io/js/feather.min.js"></script>
+	
+		<script src="https://xiaozhuoops.github.io/js/main.js"></script>
+</head>
+
+<body>
+	<div class="container wrapper">
+		<div class="header">
+	
+		<div class="avatar">
+			<a href="https://xiaozhuoops.github.io/">
+				<img src="/img/avatar.jpg" alt="Huangyizhuo" />
+			</a>
+		</div>
+	
+	<h1 class="site-title"><a href="https://xiaozhuoops.github.io/">Huangyizhuo</a></h1>
+	<div class="site-description"><p>Tell yourself that you deserve better and move on</p><nav class="nav social">
+			<ul class="flat"><li><a href="https://github.com/XiaoZhuoOps" title="Github"><i data-feather="github"></i></a></li><span class="scheme-toggle"><a href="#" id="scheme-toggle"></a></ul>
+		</nav>
+	</div>
+
+	<nav class="nav">
+		<ul class="flat">
+			
+			<li>
+				<a href="/weekly">Weekly</a>
+			</li>
+			
+			<li>
+				<a href="/cs">Cs</a>
+			</li>
+			
+			<li>
+				<a href="/fitness">Fitness</a>
+			</li>
+			
+			<li>
+				<a href="/bridge">Bridge</a>
+			</li>
+			
+			<li>
+				<a href="/readings">Readings</a>
+			</li>
+			
+			<li>
+				<a href="/leetcode_group">不残酷刷题群</a>
+			</li>
+			
+		</ul>
+	</nav>
+</div>
+
+
+		<div class="post">
+			<div class="post-header">
+				
+				<div class="matter">
+					<h1 class="title"></h1>
+				</div>
+			</div>
+
+			
+			
+			<aside class="toc">
+				<header>
+				<h2>Contents</h2>
+				</header>
+				<nav id="TableOfContents">
+  <ol>
+    <li><a href="#glossary">Glossary</a></li>
+    <li><a href="#single-server-setup">Single server setup</a></li>
+    <li><a href="#database-sql-vs-nosql"><strong>Database</strong> SQL VS NoSQL</a></li>
+    <li><a href="#vertical-scaling-vs-horizontal-scaling">Vertical scaling vs horizontal scaling</a></li>
+    <li><a href="#load-balancer">Load Balancer</a></li>
+    <li><a href="#database-replication">Database replication</a></li>
+    <li><a href="#cache">Cache</a></li>
+    <li><a href="#content-delivery-network-cdn">Content delivery network (CDN)</a></li>
+    <li><a href="#stateless-server">Stateless Server</a></li>
+    <li><a href="#message-queue">Message Queue</a></li>
+    <li><a href="#logging-metrics-automation">Logging, metrics, automation</a></li>
+    <li><a href="#shardingpartition">Sharding/Partition</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#glossary-1">Glossary</a></li>
+    <li><a href="#power-of-two">Power of Two</a></li>
+    <li><a href="#latency-numbers-every-programmer-should-know">Latency numbers every programmer should know</a></li>
+    <li><a href="#availability-numbers">Availability numbers</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#glossary-2">Glossary</a></li>
+    <li><a href="#quiz">QUIZ</a></li>
+    <li><a href="#high-level">High-level</a>
+      <ol>
+        <li><a href="#where-to-put-the-rate-limiter">Where to put the rate limiter?</a></li>
+        <li><a href="#algorithms-for-rate-limiting">Algorithms for rate limiting</a></li>
+        <li><a href="#rate-limit-rule">Rate limit Rule</a></li>
+      </ol>
+    </li>
+  </ol>
+
+  <ol>
+    <li><a href="#glossary-3">Glossary</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#glossary-4">Glossary</a></li>
+    <li><a href="#single-server-key-value-store">Single server key-value store</a></li>
+    <li><a href="#cap">CAP</a></li>
+    <li><a href="#core-components-and-techniques">core components and techniques</a>
+      <ol>
+        <li><a href="#data-partition">Data partition</a></li>
+        <li><a href="#data-replication">Data replication</a></li>
+        <li><a href="#consistency">Consistency</a></li>
+        <li><a href="#handling-failures">Handling failures</a></li>
+        <li><a href="#handling-temporary-failures">Handling temporary failures</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+			</aside>
+			
+					
+			<div class="markdown">
+				<h1 id="chapter-1-scale-from-zero-to-millions-of-users">CHAPTER 1: SCALE FROM ZERO TO MILLIONS OF USERS</h1>
+<h2 id="glossary">Glossary</h2>
+<ul>
+<li>Continuous refinement and endless improvement</li>
+<li>scale it up to serve millions of people</li>
+<li>A journey of a thousand miles begins with a single step, and building a complex system is no different.</li>
+<li>Domain Name System</li>
+<li>An example for &hellip; is shown below</li>
+<li>SQL database / NoSQL database</li>
+<li>have been around for 40 years</li>
+<li>if xx is not suitable for your specific use cases</li>
+<li>Failover and redundancy</li>
+<li>Horizontal scaling is more desirable for large scale applications due to the limitations of vertical scaling.</li>
+<li>in aother scenario</li>
+<li>this pic show how it works</li>
+<li>all the data-modifying commands</li>
+<li>the data in a slave database might not be up to date</li>
+<li>content delivery network</li>
+<li>every time a new web page loads, one or more database calls are executed to fetch data</li>
+<li>single point of failure</li>
+<li>considerations for using cache</li>
+<li>it enables the caching of HTML</li>
+<li>here is how CDN works at the high-level</li>
+<li>here is a good example that shows how CDN improves load time</li>
+<li>Time-to-Live TTL</li>
+<li>until the tll expires</li>
+<li>caching infrequently used asset providing no significant benefits</li>
+<li>the issue is that &hellip;</li>
+<li>however, this adds the overhead(额外的资源开销)</li>
+<li>traffic load</li>
+<li>To further scale your system, we need to decouple different components of the system so that they can be scaled independently</li>
+<li>consider the following use case</li>
+<li>&hellip; are good parctices but not a necessity</li>
+<li>you can monitor error logs at per server level</li>
+<li>this kind of powerful database could &hellip;</li>
+<li>vertical scaling comes with some serious drawbacks</li>
+<li>successive requests to a specific shard could cause server overload</li>
+<li>Scaling a system is an iterative process</li>
+</ul>
+<h2 id="single-server-setup">Single server setup</h2>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Stores</th>
+<th>Join</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SQL</td>
+<td>Table &amp; Row</td>
+<td>Supported</td>
+</tr>
+<tr>
+<td>NoSQL</td>
+<td>K-V / Graph / Document / Column</td>
+<td>Not Supported</td>
+</tr>
+</tbody>
+</table>
+<h2 id="database-sql-vs-nosql"><strong>Database</strong> SQL VS NoSQL</h2>
+<h2 id="vertical-scaling-vs-horizontal-scaling">Vertical scaling vs horizontal scaling</h2>
+<h2 id="load-balancer">Load Balancer</h2>
+<h2 id="database-replication">Database replication</h2>
+<h2 id="cache">Cache</h2>
+<p>Considerations</p>
+<ul>
+<li>Decide when to use cache</li>
+<li>Expiration policy</li>
+<li>Consistency</li>
+<li>Mitigating failures</li>
+<li>Eviction Policy</li>
+</ul>
+<h2 id="content-delivery-network-cdn">Content delivery network (CDN)</h2>
+<p>CDN servers cache <strong>static content</strong> like <strong>images, videos, CSS, JavaScript</strong> files, etc.</p>
+<p><strong>dynamic content cache</strong> enables the caching of HTML pages that are based on request path, query strings, cookies, and request headers.</p>
+<p>Considerations</p>
+<ul>
+<li>Cost</li>
+<li>Setting an appropriate cache expiry</li>
+<li>CDN fallback</li>
+<li>Invalidating files</li>
+</ul>
+<h2 id="stateless-server">Stateless Server</h2>
+<h2 id="message-queue">Message Queue</h2>
+<h2 id="logging-metrics-automation">Logging, metrics, automation</h2>
+<h2 id="shardingpartition">Sharding/Partition</h2>
+<h1 id="chapter-2-back-of-the-envelope-estimation">CHAPTER 2: BACK-OF-THE-ENVELOPE ESTIMATION</h1>
+<h2 id="glossary-1">Glossary</h2>
+<ul>
+<li>take the time factor into consideration</li>
+<li>the more nines, the better</li>
+<li>query per second QPS</li>
+</ul>
+<h2 id="power-of-two">Power of Two</h2>
+<ul>
+<li>An ASCII character uses one byte of memory (1 Byte/8 bits)</li>
+</ul>
+<p>![image-20240121221801807](/Users/bytedance/Library/Application Support/typora-user-images/image-20240121221801807.png)</p>
+<h2 id="latency-numbers-every-programmer-should-know">Latency numbers every programmer should know</h2>
+<ul>
+<li>通过DB查询1k pixel的延迟 约为 500ms以内</li>
+<li>新加坡 -&gt; 美国，理论最快50ms(按光速算)</li>
+</ul>
+<h2 id="availability-numbers">Availability numbers</h2>
+<p>![image-20240121222740100](/Users/bytedance/Library/Application Support/typora-user-images/image-20240121222740100.png)</p>
+<h1 id="chapter-4-design-a-rate-limiter">CHAPTER 4: DESIGN A RATE LIMITER</h1>
+<h2 id="glossary-2">Glossary</h2>
+<ul>
+<li>Denial of Service (DoS)</li>
+<li>a user can wirte (no more than/a maximum of)2 posts per day</li>
+<li>there is an alternative way bedsides the client-side and server-side</li>
+<li>send 3 request within 1 second</li>
+<li>each of them has distinct pros and cons</li>
+<li>Pre-defined</li>
+<li>API endpoints</li>
+<li>keep track of how many requests are sent form xxx</li>
+<li>the request is disallowed</li>
+<li>slowness of disk access</li>
+<li>In-memory cache</li>
+<li>increase counter by one</li>
+<li>performance optimization</li>
+<li>in case a request is rate limited, APIs return HTTP code</li>
+</ul>
+<h2 id="quiz">QUIZ</h2>
+<ul>
+<li>how to design a distributed userID-granular rate limiter
+<ul>
+<li>proposal 1: redis + TTL</li>
+</ul>
+</li>
+</ul>
+<h2 id="high-level">High-level</h2>
+<h3 id="where-to-put-the-rate-limiter">Where to put the rate limiter?</h3>
+<h3 id="algorithms-for-rate-limiting">Algorithms for rate limiting</h3>
+<ul>
+<li>Token bucket algorithm</li>
+<li>Leaking bucket algorithm</li>
+</ul>
+<h3 id="rate-limit-rule">Rate limit Rule</h3>
+<pre tabindex="0"><code>domain: auth descriptors:
+- key: auth_type 
+- Value: login 
+- rate_limit:
+	- unit: minute 
+	- requests_per_unit: 5
+</code></pre><p>![image-20240124231747594](/Users/bytedance/Library/Application Support/typora-user-images/image-20240124231747594.png)</p>
+<p>Two questions in distrbuted env:</p>
+<ul>
+<li>race condition
+<ul>
+<li>LUA 原子性操作</li>
+</ul>
+</li>
+</ul>
+<h1 id="chapter-5-design-consistent-hashing">CHAPTER 5: DESIGN CONSISTENT HASHING</h1>
+<h2 id="glossary-3">Glossary</h2>
+<ul>
+<li>let us take an in-depth look at the problem</li>
+<li>however, problem arise when new servers are added, or existing servers are removed</li>
+</ul>
+<h1 id="skipped">SKIPPED</h1>
+<h1 id="chapter-6-design-a-key-value-store">CHAPTER 6: DESIGN A KEY-VALUE STORE</h1>
+<h2 id="glossary-4">Glossary</h2>
+<ul>
+<li>A key-value store, also referred to as a key-value database, is a non-relational database</li>
+<li>there is no perfect design. Each design achieves a specific balance regarding the tradeoffs of the read, write, and memory usage</li>
+<li>Distribute data across multiple servers evenly(平均地)</li>
+</ul>
+<h2 id="single-server-key-value-store">Single server key-value store</h2>
+<p>Fitting everything in memory is impossible</p>
+<ul>
+<li>data compression</li>
+<li>store only frequently used data, the rest on disk</li>
+<li>let us take a look at some concrete examples</li>
+<li>We only chosse unique servers while performing the clockwise walk logic</li>
+<li>no longer need to &hellip;</li>
+<li>a proxy between clients and nodes</li>
+<li>As with any large system at scale, failures are not only inevitable but common</li>
+<li>Partition tolerance means the system continues to operate despite network partitions.</li>
+<li>Quoted from Wikipedia</li>
+<li>Highlighted boxes indicate inconsistency.</li>
+<li>If root hashes match, both servers have the same data. If root hashes disagree, then the left child hashes are compared followed by right child hashes.</li>
+<li>refer to the reference material</li>
+<li>it will be retrieved from the disk instead</li>
+</ul>
+<h2 id="cap">CAP</h2>
+<p>it is impossible for a distributed system to simultaneously provide more than two of these three guarantees: consistency, availability, and partition tolerance</p>
+<h2 id="core-components-and-techniques">core components and techniques</h2>
+<h3 id="data-partition">Data partition</h3>
+<h3 id="data-replication">Data replication</h3>
+<h3 id="consistency">Consistency</h3>
+<p>vector clock</p>
+<h3 id="handling-failures">Handling failures</h3>
+<p>gossip protocol</p>
+<h3 id="handling-temporary-failures">Handling temporary failures</h3>
+
+			</div>
+
+			<div class="tags">
+				
+					
+				
+			</div>
+
+			
+			<div class="back">
+				<a href="https://github.com/XiaoZhuoOps/xiaozhuoops.github.io/blob/master/content/readings%5csystem-design-interview.md" title="github"><i data-feather="github"></i> Edit this on GitHub</a>
+			</div>
+			
+			
+			<div class="back">
+				<a href="https://xiaozhuoops.github.io/"><span aria-hidden="true">← Back</span></a>
+			</div>
+			
+
+			<div class="back">
+				
+			</div></div>
+		
+	</div>
+	
+	<div class="footer wrapper">
+	<nav class="nav">
+		<div>1 </div>
+		
+	</nav>
+</div><script>feather.replace()</script>
+</body>
+</html>

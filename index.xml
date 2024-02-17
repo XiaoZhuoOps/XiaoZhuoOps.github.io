@@ -6,56 +6,98 @@
     <description>Recent content on Huangyizhuo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 23 Dec 2023 23:02:56 +0800</lastBuildDate>
-    <atom:link href="https://xiaozhuoops.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 23 Dec 2023 23:02:56 +0800</lastBuildDate><atom:link href="https://xiaozhuoops.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2023 M12 W3</title>
       <link>https://xiaozhuoops.github.io/weekly/2023-m12-w3/</link>
       <pubDate>Sat, 23 Dec 2023 23:02:56 +0800</pubDate>
+      
       <guid>https://xiaozhuoops.github.io/weekly/2023-m12-w3/</guid>
-      <description>工作任务&#xA;迁移几个接口 升级RPC服务框架 个人提升&#xA;最近工作内容繁琐但不深入，没兴趣，重新开始刷题。计划每天一道，早上看，晚上回来写。 最近愈发浮躁，拾起了冥想，效果不错，强烈推荐。 认识了一些新朋友。 问题与思考&#xA;热情与冷静，如何平衡 与其关注别人，不如做好自己 警惕那些愚弄大众，挑拨情绪的事和人 下周计划&#xA;完成服务框架升级任务&#xA;安排下跨年&#xA;咨询下公司健身课</description>
+      <description>工作任务
+迁移几个接口 升级RPC服务框架 个人提升
+最近工作内容繁琐但不深入，没兴趣，重新开始刷题。计划每天一道，早上看，晚上回来写。 最近愈发浮躁，拾起了冥想，效果不错，强烈推荐。 认识了一些新朋友。 问题与思考
+热情与冷静，如何平衡 与其关注别人，不如做好自己 警惕那些愚弄大众，挑拨情绪的事和人 下周计划
+完成服务框架升级任务
+安排下跨年
+咨询下公司健身课</description>
     </item>
+    
     <item>
       <title>Aboutme</title>
       <link>https://xiaozhuoops.github.io/aboutme/</link>
       <pubDate>Sun, 14 May 2023 22:51:41 +0800</pubDate>
+      
       <guid>https://xiaozhuoops.github.io/aboutme/</guid>
       <description></description>
     </item>
+    
     <item>
       <title>Dopamine</title>
       <link>https://xiaozhuoops.github.io/readings/dopamine/</link>
       <pubDate>Sun, 14 May 2023 22:16:50 +0800</pubDate>
+      
       <guid>https://xiaozhuoops.github.io/readings/dopamine/</guid>
       <description>[贪婪的多巴胺读书笔记](﻿⁡‌‬⁡﻿﻿⁡‍⁡﻿‌﻿⁤⁤‌﻿‬⁤﻿‍⁡⁢⁣⁢‍‍⁢⁢﻿‍⁣⁡⁤﻿⁢⁣贪婪的多巴胺 - 飞书云文档 (feishu.cn))</description>
     </item>
+    
     <item>
       <title>The Road Less Traveled</title>
       <link>https://xiaozhuoops.github.io/readings/the-road-less-traveled/</link>
       <pubDate>Sat, 21 Jan 2023 20:44:43 +0800</pubDate>
+      
       <guid>https://xiaozhuoops.github.io/readings/the-road-less-traveled/</guid>
       <description>[少有人走的路：心智成熟的旅程](‌‍‬⁣‍⁤‍‬⁡‬‬‍‌⁣﻿‌‬‌‬⁤⁢⁤‍⁤⁤‍⁤‍⁣⁤⁢⁤﻿﻿﻿‬﻿⁤少有人走的路 - 飞书云文档 (feishu.cn))</description>
     </item>
+    
     <item>
       <title>Thinking Fast and Slow</title>
       <link>https://xiaozhuoops.github.io/readings/thinking-fast-and-slow/</link>
       <pubDate>Mon, 09 Jan 2023 20:47:38 +0800</pubDate>
+      
       <guid>https://xiaozhuoops.github.io/readings/thinking-fast-and-slow/</guid>
       <description>《思考：快与慢》读书笔记</description>
     </item>
+    
     <item>
       <title>不残酷刷题群</title>
       <link>https://xiaozhuoops.github.io/leetcode_group/</link>
       <pubDate>Mon, 09 Jan 2023 11:31:04 +0800</pubDate>
+      
       <guid>https://xiaozhuoops.github.io/leetcode_group/</guid>
-      <description>介绍 向往残酷群久矣，奈何自己时间和水平有限，怕进去就成了送财童子，所以组了一个“不残酷刷题群”，有兴趣的同学可以一起来刷题和交流。&#xA;目前群人数约为90人左右，都是ZJU/FDU/SJTU的同学，目标不超过100人。&#xA;群规 本群是不残酷刷题群，群规如下：&#xA;请在进群24小时内登记个人信息。&#xA;每日一题。每天24：00之前完成leetcode/codeforce/洛谷等网站一道算法题，截图发群里打卡，需带有时间标识。&#xA;周赛。每周末参加周赛/双周赛，成绩截图发群里打卡。（虚拟周赛也可）（暂行）&#xA;连续两个自然日未打卡 或 一次周赛未参加请发红包(除去法定节假日)，红包金额=群活跃人数，个数=群活跃人数的随机红包。（红包金额和个数的上限为50）（暂行）&#xA;鼓励讨论不限于刷题路线、心得体会、实习招聘等话题，鼓励分享不限于算法、八股文、求职面试等资源。&#xA;特殊情况可在群里@管理员请假，并说明请假结束时间。&#xA;@管理员加入不残酷八股群等子群&#xA;残酷群指路board.cruelcoding.com/rules.html，希望大家早日进阶残酷群！&#xA;其他：目前每人根据自己的进度选择一道题目即可（暂行）。&#xA;对群规有异议的同学可以发起投票，超过2/3的成员赞同即可修改。&#xA;二维码 不定时更新二维码，若失效，可以加我wx 13262764732</description>
+      <description>介绍 向往残酷群久矣，奈何自己时间和水平有限，怕进去就成了送财童子，所以组了一个“不残酷刷题群”，有兴趣的同学可以一起来刷题和交流。
+目前群人数约为90人左右，都是ZJU/FDU/SJTU的同学，目标不超过100人。
+群规 本群是不残酷刷题群，群规如下：
+请在进群24小时内登记个人信息。
+每日一题。每天24：00之前完成leetcode/codeforce/洛谷等网站一道算法题，截图发群里打卡，需带有时间标识。
+周赛。每周末参加周赛/双周赛，成绩截图发群里打卡。（虚拟周赛也可）（暂行）
+连续两个自然日未打卡 或 一次周赛未参加请发红包(除去法定节假日)，红包金额=群活跃人数，个数=群活跃人数的随机红包。（红包金额和个数的上限为50）（暂行）
+鼓励讨论不限于刷题路线、心得体会、实习招聘等话题，鼓励分享不限于算法、八股文、求职面试等资源。
+特殊情况可在群里@管理员请假，并说明请假结束时间。
+@管理员加入不残酷八股群等子群
+残酷群指路board.cruelcoding.com/rules.html，希望大家早日进阶残酷群！
+其他：目前每人根据自己的进度选择一道题目即可（暂行）。
+对群规有异议的同学可以发起投票，超过2/3的成员赞同即可修改。
+二维码 不定时更新二维码，若失效，可以加我wx 13262764732</description>
     </item>
+    
     <item>
       <title>Leetcode-Skill</title>
       <link>https://xiaozhuoops.github.io/cs/leetcode_skill/</link>
       <pubDate>Mon, 09 Jan 2023 01:01:33 +0800</pubDate>
+      
       <guid>https://xiaozhuoops.github.io/cs/leetcode_skill/</guid>
-      <description>我的刷题总结：算法手册&#xA;持续更新中&amp;hellip;</description>
+      <description>我的刷题总结：算法手册
+持续更新中&amp;hellip;</description>
     </item>
+    
+    <item>
+      <title></title>
+      <link>https://xiaozhuoops.github.io/readings/system-design-interview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://xiaozhuoops.github.io/readings/system-design-interview/</guid>
+      <description>CHAPTER 1: SCALE FROM ZERO TO MILLIONS OF USERS Glossary Continuous refinement and endless improvement scale it up to serve millions of people A journey of a thousand miles begins with a single step, and building a complex system is no different. Domain Name System An example for &amp;hellip; is shown below SQL database / NoSQL database have been around for 40 years if xx is not suitable for your specific use cases Failover and redundancy Horizontal scaling is more desirable for large scale applications due to the limitations of vertical scaling.</description>
+    </item>
+    
   </channel>
 </rss>

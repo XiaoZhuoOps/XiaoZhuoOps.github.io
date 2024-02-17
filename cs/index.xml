@@ -6,14 +6,16 @@
     <description>Recent content in Cs on Huangyizhuo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 09 Jan 2023 01:01:33 +0800</lastBuildDate>
-    <atom:link href="https://xiaozhuoops.github.io/cs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 09 Jan 2023 01:01:33 +0800</lastBuildDate><atom:link href="https://xiaozhuoops.github.io/cs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Leetcode-Skill</title>
       <link>https://xiaozhuoops.github.io/cs/leetcode_skill/</link>
       <pubDate>Mon, 09 Jan 2023 01:01:33 +0800</pubDate>
+      
       <guid>https://xiaozhuoops.github.io/cs/leetcode_skill/</guid>
-      <description>我的刷题总结：算法手册&#xA;持续更新中&amp;hellip;</description>
+      <description>我的刷题总结：算法手册
+持续更新中&amp;hellip;</description>
     </item>
+    
   </channel>
 </rss>
